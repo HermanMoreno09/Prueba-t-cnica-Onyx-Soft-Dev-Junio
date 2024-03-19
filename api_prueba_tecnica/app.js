@@ -2,12 +2,13 @@ import express from "express";
 import cors from 'cors';
 import db from './database/db.js';
 import libroRoutes from './routes/routes.js';
-
+import libroFiltroRouter from './routes/libroFiltroRouter.js';
 const app = express();
 
 app.use(cors());
 app.use(express.json());
 app.use('/libros', libroRoutes);
+app.use('/librosFiltroPrueba', libroFiltroRouter);
 
 //Ejemplo desde el postman o Thunder Client
 /*app.get('/', (req, res)=>{

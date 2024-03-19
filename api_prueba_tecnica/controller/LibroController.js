@@ -1,7 +1,5 @@
 import LibroModel from "../models/LibroModel.js";
-
 // Metodos CRUD
-
 // Mostrar todos los registros de los librus
 export const getAllLibros = async(req, res) =>{
     try {
@@ -11,6 +9,7 @@ export const getAllLibros = async(req, res) =>{
         res.json({message: error.message})
     }
 }
+
 
 // Mostrar un registro de los libros 
 export const getLibro = async (req, res) =>{
@@ -62,5 +61,7 @@ export const deleteLibro = async (req, res) => {
     } catch (error) {
         res.json({ message: error.message });
     }
+
+
     
 }
